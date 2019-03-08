@@ -13,8 +13,8 @@ db.sequelize.sync().then(function () {
     company: "GE Aviation",
     department: "Aviation Intels",
     owned_by: "Monki Who",
-    owned_bycompany: "GE Aviation",
-    owned_bydepartment: "PW Intels"
+    owned_by_company: "GE Aviation",
+    owned_by_department: "PW Intels"
     },
     {
     config_item_id:"7654321" ,
@@ -24,8 +24,8 @@ db.sequelize.sync().then(function () {
     company: "GE Energy",
     department: "Energy RD",
     owned_by: "Sian Shi",
-    owned_bycompany: "GE Energy",
-    owned_bydepartment: "Energy RD"
+    owned_by_company: "GE Energy",
+    owned_by_department: "Energy RD"
     },
     {
     config_item_id:"567890" ,
@@ -35,8 +35,8 @@ db.sequelize.sync().then(function () {
     company: "GE Digital",
     department: "Fun GP",
     owned_by: "King Kong",
-    owned_bycompany: "GE Digital",
-    owned_bydepartment: "NotFun GP"
+    owned_by_company: "GE Digital",
+    owned_by_department: "NotFun GP"
     },    
 
     ]).then(function (data) {
