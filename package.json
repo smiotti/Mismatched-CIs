@@ -1,0 +1,33 @@
+{
+  "name": "mismatched-cis",
+  "version": "1.0.0",
+  "description": "This App will sort and display all mismatched CIs in the CMDB by business entity to eliminate misaligned charges.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiranEjerenwa/Mismatched-CIs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MiranEjerenwa/Mismatched-CIs/issues"
+  },
+  "homepage": "https://github.com/MiranEjerenwa/Mismatched-CIs#readme",
+  "dependencies": {
+    "bluebird": "^3.5.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "fs": "0.0.1-security",
+    "lodash": "^4.17.11",
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.5",
+    "node": "^11.11.0",
+    "path": "^0.12.7",
+    "request": "^2.88.0",
+    "sequelize": "^4.43.0"
+  }
+}

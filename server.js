@@ -1,27 +1,49 @@
-// Imports express into our app and sets it up for use
+// require express and path
 const express = require('express');
 const path = require('path');
-const db = require('./models');
+const bodyParser = require('body-parser');
+
 const app = express();
-// Defines a PORT for the server to listen for requests
-var PORT = process.env.PORT || 3000;
-// Sets up our server to parse our request body for usage
+
+// defining port
+const PORT = process.env.PORT || 8080;
+
+//syncwith database
+const db = require('./models');
+
+
+//seting up server to parse request body
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, './public')));
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
+// server setup the public directory for static assets usage
+app.use(express.static( './public'));
+
 // Routes
-// -----------------
-require('./routes/api-routes.js')(app);
-// require('./routes/html-routes.js')(app);
+require('./routes/api-routes')(app);
+require('./routes/html-routes')(app);
 
 
-// const db = require('./models');
-// Syncs our database first
-db.sequelize.sync().then(function(){
-    app.listen(PORT, function(){
-        console.log(`App is now listening on PORT ${PORT}`)
-      });
-    // Starts our server on the predefined PORT
-    // Only starts if the db successfully syncs
-    });
-    
+//Syncs the db
+db.sequelize.sync().then(function () {
+
+})
+
+app.get('/', function(req,res){
+        
+    res.sendFile(path.join(__dirname, "/../public/.html" ))
+})
+
+ 
+//Starting server on the predefined Port
+app.listen(PORT, function () {
+    console.log(`App is now listening on PORT ${PORT}`)
+});
+
+
+
+
+
