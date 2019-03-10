@@ -1,3 +1,12 @@
+// *****************************************************************************
+// Server.js - This file is the initial starting point for the Node/Express server.
+//
+// ******************************************************************************
+// *** Dependencies ***
+
+// requiring in .env
+require('dotenv').config();
+
 // require express and path
 const express = require('express');
 const path = require('path');
