@@ -57,7 +57,10 @@ module.exports = function (connection, Sequelize) {
       type: Sequelize.STRING,
       allowNull: false,
     }
-  });
+  },  {
+    timestamps: false
+}
+  );
 
  // Associations to other models
  Cidata.associate = function(models) {
