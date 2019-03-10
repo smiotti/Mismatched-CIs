@@ -61,16 +61,11 @@ module.exports = function (connection, Sequelize) {
 
  // Associations to other models
  Cidata.associate = function(models) {
-  Cidata.hasMany(models.User, {
-    foreignKey: 'config_item_id'
-  });
-
   Cidata.belongsTo(models.User, {
-    foreignKey: 'id'
-   });
-};
-
-
+    foreignKey: 'id',
+    onDelete: 'cascade'
+  });
+}
   return Cidata;
 }
 
