@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 // defining port
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 //syncwith database
 const db = require('./models');

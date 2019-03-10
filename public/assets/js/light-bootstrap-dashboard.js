@@ -17,8 +17,6 @@
 
 */
 
- 
-
 var searchVisible = 0;
 
 var transparent = true;
@@ -29,29 +27,19 @@ var transparentDemo = true;
 
 var fixedTop = false;
 
- 
-
 var navbar_initialized = false;
-
- 
 
 $(document).ready(function(){
 
     window_width = $(window).width();
 
- 
-
    // check if there is an image set for the sidebar's background
 
     lbd.checkSidebarImage();
 
- 
-
     // Init navigation toggle for small screens
 
     lbd.initRightMenu();
-
- 
 
     //  Activate the tooltips
 

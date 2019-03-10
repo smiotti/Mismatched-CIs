@@ -4,7 +4,7 @@ const db = require('../models');
 
 //Syncing our sequelize models
 db.sequelize.sync().then(function () {
-    db.Product.bulkCreate([{
+    db.Cidata.bulkCreate([{
 
     config_item_id:"1234567" ,
     ci_name: "mavrevup",

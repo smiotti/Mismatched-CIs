@@ -36,10 +36,14 @@ module.exports = function (connection, Sequelize) {
   });
 
 // Associations to Recipe model
+
+
 User.associate = function(models) {
-  User.belongsTo(models.Cidata, {
-    foreignKey: 'config_item_id',
-    onDelete: 'cascade'
+  User.hasMany(models.Cidata, {
+    foreignKey: 'id'
+  });
+  User.belongsTo(models.Department, {
+    foreignKey: 'department'
   });
 };
 
