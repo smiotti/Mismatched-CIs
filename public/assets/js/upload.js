@@ -55,19 +55,18 @@ $(document).ready(function() {
       var mappedData = data.map(function(entry) {
           return {
             config_item_id: entry[0],
-            primaryKey: entry[1],
-            ci_name: entry[2],
-            install_status: entry[3],
-            model_id_classification: entry[4],
-            company: entry[5],
-            department: entry[6],
-            owned_by: entry[7],
-            owned_by_company: entry[8],
-            owned_by_department: entry[9]
+            ci_name: entry[1],
+            install_status: entry[2],
+            model_id_classification: entry[3],
+            company: entry[4],
+            department: entry[5],
+            owned_by: entry[6],
+            owned_by_company: entry[7],
+            owned_by_department: entry[8]
           }
       });
     //posting the object into the table
-      $.post('/api/Cidata', {data: mappedData}, function(data) {
+      $.post('/api/Mismatched_CI', {data: mappedData}, function(data) {
         console.log(data);
     });
 

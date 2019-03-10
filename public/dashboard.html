@@ -31,7 +31,8 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
 
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
-
+  <!-- js file-->
+  <script src="assets/js/app.js"></script>
 </head>
 
 <body>
@@ -191,15 +192,9 @@
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 
                                   <!--  <p>
-
-                                                                                                                                                Dropdown
-
-                                                                                                                                                <b class="caret"></b>
-
-                                                                                                                                  </p>
-
- 
-                                                                                                                                -->
+                                      Dropdown
+                                      <b class="caret"></b>
+                                    </p> -->
                               </a>
 
                               <ul class="dropdown-menu">
@@ -207,8 +202,6 @@
                                 <li><a href="#">Action</a></li>
 
                                 <li><a href="#"> action</a></li>
-
-                              
 
                               </ul>
 
@@ -234,13 +227,15 @@
 
         </nav>
 
+                <!--inventory table built when server running-->
+
         <div class="content">
 
             <div class="container-fluid">
 
                 <div class="row">
 
-                    <div class="col-md-6">
+                    <div class="col-md-12">
 
                         <div class="card ">
 
@@ -248,31 +243,49 @@
 
                                 <h4 class="title">Dashboard#3</h4>
 
-                                <p class="category">deescription</p>
-
-                            </div>
-
-                            <div class="content">
-
-                                <div id="chartActivity" class="ct-chart"></div>
 
                                 <div class="footer">
 
-                                    <div class="legend">
-
-                                        
-
-                                        <i class="fa fa-circle text-info"></i> some info
-
-                                        <i class="fa fa-circle text-danger"></i> some info2
-
+                                        <div class="legend">
+    
+                                            
+    
+                                            <i class="fa fa-circle text-info"></i> some info
+    
+                                            <i class="fa fa-circle text-danger"></i> some info2
+    
+                                        </div>
+    
+                                        <hr>
+    
+                                      
+    
                                     </div>
+                            </div>
 
-                                    <hr>
+                            <div class="content">
+                                    <div class="table-responsive">
+                                            <table class="table">
+                                                <thead class="thead">
+                                                    <tr>
+                                                        <th>Config_item_id</th>
+                                                        <th>ci_name</th>
+                                                        <th>install_status</th>
+                                                        <th>model_id_classification</th>
+                                                        <th>company</th>
+                                                        <th>department</th>
+                                                        <th>owned_by</th>
+                                                        <th>owned_by_company</th>
+                                                        <th>owned_by_department</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="ciData">
+                                                </tbody>
+                                            </table>
+                                        </div>
+                            
 
-                                  
-
-                                </div>
+                                <div id="chartActivity" class="ct-chart"></div>
 
                             </div>
 
@@ -382,7 +395,7 @@
 
               <script src="assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
   <!-- js file-->
-  <script src="assets/js/upload.js"></script>
+  <script src="assets/js/app.js"></script>
 
  
 
