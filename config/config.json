@@ -2,11 +2,7 @@
     "development": {
       "username": "root",
       "password": "root",
-<<<<<<< HEAD
-      "database": "Users",
-=======
       "database": "mismatchedci_db",
->>>>>>> 18a2120967c71443e27b2a6eee222c158417b00e
       "host": "localhost",
       "port": 3306,
       "dialect": "mysql"
