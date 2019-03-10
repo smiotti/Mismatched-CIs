@@ -24,6 +24,19 @@ module.exports = function (connection, Sequelize) {
       }
     },
 
+    email: {
+      type: Sequelize.STRING,
+      isEmail: true
+    },
+
+    password: {
+      type: Sequelize.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: true
+      }
+    },
+
     department: {
       type: Sequelize.STRING,
       allowNull: false,
