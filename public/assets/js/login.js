@@ -13,7 +13,7 @@ $(document).ready(function(){
     .done(function( response ) {
       if(response.auth){
         //Where you want to go after auth
-        window.location= "/dashboard";
+        window.location+= "/dashboard";
       }else{
         alert("Invalid username or password")
       }
