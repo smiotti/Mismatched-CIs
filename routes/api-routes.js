@@ -4,7 +4,7 @@ const models = require('../models');
 
 var jwt = require('jsonwebtoken');
 var userVerification = require('../controller/auth');
-var config = require('../config/config');
+var config = require('../config/index');
 var body = require('express-validator/check').body;
 const db = require('../models');
 //restAPI

@@ -1,8 +1,8 @@
-var users = require('../tempData/users')
-module.exports = function(u,p){
+var credential = require('../tempData/credential')
+module.exports = function(u, p){
     var result = false;
-    for (var i = 0; i < users.length; i++){
-        if(users[i].name == u && users[i].password == p){
+    for (var i = 0; i < credential.length; i++){
+        if(credential[i].name == u && credential[i].password == p){
              result = true;
              break;
         }
