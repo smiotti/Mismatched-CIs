@@ -1,36 +1,69 @@
-//require models library
+// Import in our db models
+var jwt = require('jsonwebtoken');
+var userVerification = require('../controller/auth');
+var config = require('../config/index');
+const db = require('../models');
 const RestfulAPI = require('./RestClass');
-const models = require('../models');
 
-//restAPI
+
+// var body = require('express-validator/check').body;
+// var param = require('express-validator/check').param;
+// var validationResult = require('express-validator/check').validationResult;
+
 module.exports = function (app) {
+  // API requests for /api/login
 
-  const mismatched_ci = new RestfulAPI('Mismatched_CI', app, models.Cidata);
-  mismatched_ci.findAll();
-  mismatched_ci.find('id');
-  mismatched_ci.create();
-  mismatched_ci.delete('id');
-  mismatched_ci.update('id');
+  app.post("/api/login", function (req, res) {
+    if (userVerification(req.body.username, req.body.password)) {
+      var token = jwt.sign({ id: req.body.username }, config.secret, {
+        expiresIn: 86400 // expires in 24 hours
+      });
+      currentUser = req.body.username;
+      console.log(`The token is ${token}`);
+      res.cookie('token', token).json({ auth: true, redirect: 'dashboard' });
+
+    } else {
+      res.status(401).send("You are not authorized");
+    }
+  });
+
+  // app.use(function(req, res, next){
+  //   //Add an express-validator check to ensure the field isn't empty and it contains a valid JWT
+  //   var token = req.headers.authorization;
+  //   if(token){
+  //     jwt.verify(token, config.secret, function(err, decoded) {
+  //       if(err || (decoded.id != currentUser)){
+  //         res.status(403).json({
+  //           auth: false,
+  //           message:"Incorrect or missing token"
+  //         });
+  //       }else{
+  //         next();
+  //       }    
+  //     });
+  //   }else
+  //   res.status(403).json({
+  //     auth: false,
+  //     message:"Incorrect or missing token"
+  //   });  
+  // });
+  // app.get("/api/users",function(req,res){
+  //     res.json({auth:true,data:users});
+  // });
+
+
+  // restAPI
+  module.exports = function (app) {
+
+    const mismatched_ci = new RestfulAPI('Mismatched_CI', app, models.Cidata);
+    mismatched_ci.findAll();
+    mismatched_ci.find('id');
+    mismatched_ci.create();
+    mismatched_ci.delete('id');
+    mismatched_ci.update('id');
+  }
+
+
 }
-// ===============================================================================
-// ROUTING
-// ===============================================================================
 
-// module.exports = function(app) {
-  
-//   // POST Request
-//   // Adds a new product to our database
-//   // Responds with success: true or false if successful
-//   app.post('/api/login', function(req, res) {
-//     // Check client side data that was sent
-//     console.log (req.body);
-//     // Find if user exist in database
-//     // db.Users.create(req.body).then(function(rows) {
-//     //   res.json({ success: true });
-//     // }).catch(function(error) {
-//     //   res.json({ error: error })
-//     // });
-//   });
-
-// };
 

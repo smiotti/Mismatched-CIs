@@ -489,6 +489,7 @@ input:focus {
  
 
 .sidebar .sidebar-wrapper {
+    background-color: #38577C;
 
     position: relative;
 
@@ -3462,7 +3463,7 @@ fieldset[disabled] .btn-neutral.active {
 
 .navbar.fixed {
 
-    width: calc(100% - $sidebar-width);
+    width: calc(100% - sidebar-width);
 
     right: 0;
 

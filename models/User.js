@@ -47,6 +47,7 @@ module.exports = function (connection, Sequelize) {
       type: Sequelize.STRING,
       allowNull: false,
     }
+    
   });
 
 // Associations to Recipe model
