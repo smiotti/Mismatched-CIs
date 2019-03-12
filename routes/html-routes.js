@@ -11,7 +11,7 @@ module.exports = function (app) {
     app.get('/dashboard', function(req,res){
         console.log("In dash board")
         res.sendFile(path.join(__dirname, "/../public/dashboard.html" ))
-    })
+    });
 
     app.get('/user', function(req,res){ 
         res.sendFile(path.join(__dirname, "/../public/user.html" ))
