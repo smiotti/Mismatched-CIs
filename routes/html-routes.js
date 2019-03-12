@@ -13,13 +13,13 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname, "/../public/dashboard.html" ))
     });
 
-    app.get('/user', function(req,res){
-        
+    app.get('/user', function(req,res){ 
         res.sendFile(path.join(__dirname, "/../public/user.html" ))
+    })
+  
+    // If no matching route is found default to index
+    app.get('*', function(req, res) {
+        res.sendFile(path.join(__dirname, '/../public/index.html'));
     });
-      // If no matching route is found default to index
-  app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
-  });
-    
+
 };
