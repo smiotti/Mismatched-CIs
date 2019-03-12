@@ -12,6 +12,7 @@
   /* color:rgb(255, 255, 255); */
   text-align: center;
   line-height: 40px;
+  /* padding-top: 15px; */
 }
 
 /* Heading for Parallax Section */
@@ -83,13 +84,17 @@
   margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 10%;
+  font-family: Arial, Helvetica, sans-serif;
   /* font-size: 24px; */
-  color:rgb(15, 57, 146);
+  /* padding-top: 55px; */
+  color: #444444;
+  /* color:rgb(15, 57, 146); */
   text-align: center;
   border-color: white;
   border-style: outset;
-  /* border-width: 5px; */
-  /* line-height: 40px; */
+  /* border-radius: 90%; */
+  /* border-width: 4px;  */
+  
 }
 
 #team {
@@ -136,7 +141,7 @@
 }
 
 .teamborder {
-  border-style: inset;
+  border-style: outset;
   border: 3px solid lightgray;
   padding: 20px;
   background-color: whitesmoke;
