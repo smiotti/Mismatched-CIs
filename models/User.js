@@ -48,7 +48,8 @@ module.exports = function (connection, Sequelize) {
       allowNull: false,
     }
     
-  });
+  }
+  );
 
 // Associations to Recipe model
 

@@ -62,7 +62,9 @@ $(document).ready(function() {
             department: entry[5],
             owned_by: entry[6],
             owned_by_company: entry[7],
-            owned_by_department: entry[8]
+            owned_by_department: entry[8],
+            email: entry[9]
+
           }
       });
     //posting the object into the table
