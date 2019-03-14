@@ -28,7 +28,7 @@ class RestfulAPI {
             console.log(`item inserted. config_item_id: ${item.config_item_id}`);
           })
           .catch(function(err){
-            console.log(`entry failed: ${JSON.stringify(item)}`);
+            console.log(`entry failed: ${JSON.stringify(err)}`);
           })
         });
       })
