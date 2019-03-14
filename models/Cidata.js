@@ -56,8 +56,15 @@ module.exports = function (connection, Sequelize) {
     owned_by_department: {
       type: Sequelize.STRING,
       allowNull: false,
-    }
-  },  {
+    },
+    email: {
+      type: Sequelize.STRING,
+      allowNull: true,
+      isEmail: true
+    },
+  }, 
+
+   {
     timestamps: false
 }
   );
