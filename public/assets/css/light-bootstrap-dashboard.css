@@ -90,7 +90,11 @@
 
 }
 
- 
+.navbar {
+    background-color: #38577C !important;
+ }
+
+
 
 /*           Font Smoothing      */
 
@@ -430,6 +434,7 @@ input:focus {
 
 .fa {
 
+    color: white;
     width: 18px;
 
     text-align: center;
@@ -3354,6 +3359,8 @@ fieldset[disabled] .btn-neutral.active {
  
 
 .navbar .navbar-brand {
+
+    color: white;
 
     font-weight: 400;
 
@@ -7634,6 +7641,7 @@ fieldset[disabled] .btn-neutral.active {
     .navbar-header {
 
         float: none;
+        
 
     }
 

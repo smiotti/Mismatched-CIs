@@ -59,7 +59,7 @@ footer{
     
     nav a:nth-child(even) {
         border-left: 1px solid #777777 !important;
-        border-right: 1px solid #777777 !important;
+        /* border-right: 1px solid #777777 !important; */
     }
     
     nav a:last-child {
