@@ -2504,6 +2504,7 @@ fieldset[disabled] .btn-neutral.active {
 
     border-bottom-width: 1px;
 
+    /* adjust table header font size  */
     font-size: 12px;
 
     text-transform: uppercase;
@@ -4413,6 +4414,7 @@ fieldset[disabled] .btn-neutral.active {
 
     margin-bottom: 30px;
 
+    width: 100%;
 }
 
  
