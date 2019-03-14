@@ -4397,9 +4397,10 @@ fieldset[disabled] .btn-neutral.active {
 }
 
 .upload-card{
-    margin-left: 235px;
+    margin-top: 25px;
+    margin-left: 25px;
     /* adjust card with here */
-    width: 83%;
+    width: 97%;
 }
 
 .card {
