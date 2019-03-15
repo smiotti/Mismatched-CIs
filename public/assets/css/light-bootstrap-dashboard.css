@@ -7529,11 +7529,11 @@ fieldset[disabled] .btn-neutral.active {
 
     }
 
-    .navbar-fixed-top {
+    /* .navbar-fixed-top {
 
         -webkit-backface-visibility: hidden;
 
-    }
+    } */
 
     #bodyClick {
 
