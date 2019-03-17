@@ -1,5 +1,6 @@
 -- Load this file in SQL Workbench, modify the DB name in the USE statement, 
--- if necessary, and execute the Insert statements to populate seed data.
+-- if necessary, and execute the Insert statements to populate seed data. 
+-- Load order is department_seeds, users_seeds, Cidata_seeds
 USE mismatchedci_dev_db; 
 INSERT INTO Cidata (config_item_id, ci_name, install_status, model_id_classification, company, department, owned_by, owned_by_company, owned_by_department, email, id) VALUES
 (3387367572, 'b5lmzz325a7kss', 'Installed', 'Server', 'GE Digital', 'Digital Operations', 'Abogi, Peter (866970851)', 'GE Digital', 'Digital Operations', 'peter.abogi@company.com', 4),

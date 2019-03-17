@@ -4,12 +4,11 @@ module.exports = function (connection, Sequelize) {
 
 
     config_item_id: {
-      type: Sequelize.INTEGER,
+      type: Sequelize.BIGINT,
       validate: {
         isInt: true,
       },
       primaryKey: true,
-      // autoIncrement: true
     },
 
     ci_name: {

@@ -1,5 +1,6 @@
 -- Load this file in SQL Workbench, modify the DB name in the USE statement, 
--- if necessary, and execute the Insert statements to populate seed data.
+-- if necessary, and execute the Insert statements to populate seed data. 
+-- Load order is department_seeds, users_seeds, Cidata_seeds
 USE mismatchedci_dev_db;
 INSERT INTO Users (id, fname, lname, email, password, department, Role, createdAt, updatedAt) VALUES
 (1, 'Brewington','Michelle', 'michelle.brewington@company.com', 'michelle', 'Digital Risk Staff', 'manager', NOW(), NOW()),
