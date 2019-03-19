@@ -19,7 +19,7 @@ Project requirements:
 9. Must meet good quality coding standards (indentation, scoping, naming)
 10. Must include unit tests via Mocha / Chai and UI tests using Sinon
 11. Must include at least 3 custom NPM scripts (i.e. built in npm scrips do NOT count, must be executed using npm run ).
-        - Consider scripts needed to prune and/or check for outdated packages, clean (rm -rf node modules) and build scripts (npm i). 
+        - Consider scripts needed to prune and/or check for outdated packages (installed: https://www.npmjs.com/package/npm-check), clean (rm -rf node modules) and build scripts (npm i). 
         - Consider using NPX to standardize package execution for all team members
 12. Must use HelmetJS npm package
 Optional:
