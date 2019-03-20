@@ -221,13 +221,17 @@
       height: 45px; 
       width: 45px;
     }
+    .collage{
+      margin-top: 10%;
+      margin-bottom: 12%;
+      margin-left: 2%;
+    }
+
   /* Paragrapgh for Parallax Section */
   .paral p {
     font-size: 24px;
-    /* color:rgb(255, 255, 255); */
     text-align: center;
     line-height: 28px;
-    /* padding-top: 15px; */
   }
   }
 
