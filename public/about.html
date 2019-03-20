@@ -46,8 +46,8 @@
         <div class="collage">
             <div class="row centered">
                 <div class="d-flex justify-content-between">
-                    <div class="col-lg-2"> <a href="./assets/images/about/db-design.jpg"><img class="collage"
-                                src="./assets/images/about/db-design.jpg" height="300px" width="300px"
+                    <div class="col-lg-2"> <a href="./assets/images/about/CI Storyboard.jpg"><img class="collage"
+                                src="./assets/images/about/CI Storyboard.jpg" height="300px" width="300px"
                                 alt="data model image" id="imgstyle1"></a>
                     </div>
                     <div class="col-lg-2"> <a href="./assets/images/about/bash.JPG"><img class="collage"
@@ -58,8 +58,8 @@
                                 src="./assets/images/about/github.jpg" height="300px" width="300px" alt="github image"
                                 id="imgstyle1"></a>
                     </div>
-                    <div class="col-lg-2"> <a href="./assets/images/about/workbench.JPG"><img class="collage"
-                                src="./assets/images/about/workbench.JPG" height="300px" width="300px"
+                    <div class="col-lg-2"> <a href="./assets/images/about/db-design.jpg"><img class="collage"
+                                src="./assets/images/about/db-design.jpg" height="300px" width="300px"
                                 alt="workbench image" id="imgstyle2"></a>
                     </div>
                     <div class="col-lg-2"> <a href="./assets/images/about/heroku.png"> <img class="collage"
@@ -77,9 +77,9 @@
             style="padding-top: 93px;">
             <div class="wn-header wn-header--center wn-header--wysiwyg row">
                 <div class="col-sm-12 col-sm-offset-2">
-                    <h2 class="wn-header__text">
-                        Application Information</h2>
-                    <!-- <p class="wn-header__subtext">"I cook with wine. Sometimes I even add it to the food.” - W C Fields</p> -->
+                    <h1 class="wn-header__text">
+                        Application Information</h1>
+                   
                     <hr><br><br>
                 </div>
             </div>
@@ -98,16 +98,13 @@
                     </div>
                     <div class="wn-section__container wn-section__container--middle">
                         <div class="wn-article wn-article--wysiwyg">
-                            <p> Need to be able to log into app and manage CI data based on user credentials
-                                • Should be able to upload a CSV file containing CI, Owning and Billing Department data
-                                • Upon data import, filter out CI data that contains a match between Dept Owner and Dept
-                                Billed by querying DB by User/DeptID
+                            <p> Need to be able to log into app and manage CI data based on user credentials (email & password)
+                                • Should be able to upload a CSV file containing CI, CI Owner, Owning and Billing Department data
+                                • Upon data import, filter out CI data that does not have a match between CI department owner and department billed by, querying DB by user and department ID 
                                 • Display only missmatched CI data as a list on HTML dashboard
+                                • Display a graph of missmatched CI data by Department
                                 • Add funtionality to notify / email the owner of mis-alinged CI data to correct in the
                                 CMDB
-                                •
-                                •
-                                •
                             </p>
                         </div>
                     </div>
@@ -115,7 +112,7 @@
                 </div>
                 <div class="wn-section__col col-xs-12 col-md-4 col-sm-6">
                     <div class="wn-section__container wn-section__container--center wn-section__container--middle">
-                        <figure class="wn-figure"><img src="./assets/images/about/techimage.jpg" height="50px"
+                        <figure class="wn-figure"><img src="./assets/images/about/tech icon.jpeg" height="50px"
                                 width="50px" class="wn-figure__img"></figure>
                     </div>
                     <div class="wn-section__container wn-section__container--middle">
@@ -126,13 +123,13 @@
                     <div class="wn-section__container wn-section__container--middle">
                         <div class="wn-article wn-article--wysiwyg">
                             <p> Mismatched CI Dashboard is a web application using a Node and Express Web Server, backed
-                                by a
-                                MySQL Database.
-                                Sequelize is being used as the interface between the two system (ORM).
+                                by a MySQL Database.  Sequelize is being used as the interface between the two system (ORM).
                                 The application is deployed on a public cloud platform, Heroku, for the Production
-                                environment. User authorization and data access is achieved using JWT. ..something about
-                                Web
-                                app secutiry (owasp)...... To meet new technology requirements,...
+                                environment. User authorization and data access is achieved using JWT. The middleware, HelmetJS, has been implemented to
+                                add application security by setting secure HTTP headers and secure content policies, amongst others.
+                                To meet new technology requirements, D3 (JavaScript library) is being used to produce dynamic, 
+                                interactive data visualizations.  Custom NPM "scripts" can be found in Package.js, and API Endpoint Testing is 
+                                performed using Chai for Test Driven Development (from the terminal -> npm run windowstest)
                             </p>
                         </div>
                     </div>
@@ -141,7 +138,7 @@
                 <div class="clearfix visible-sm-block"></div>
                 <div class="wn-section__col col-xs-12 col-md-4 col-sm-6">
                     <div class="wn-section__container wn-section__container--center wn-section__container--middle">
-                        <figure class="wn-figure"><img src="./assets/images/about/functionality.jpg" height="50px"
+                        <figure class="wn-figure"><img src="./assets/images/about/mvp head.png" height="50px"
                                 width="50px" class="wn-figure__img"></figure>
                     </div>
                     <div class="wn-section__container wn-section__container--middle">
@@ -151,12 +148,15 @@
                     </div>
                     <div class="wn-section__container wn-section__container--middle">
                         <div class="wn-article wn-article--wysiwyg">
-                            <p> • Need to populate this section........
-
-                                •
-
-                                •
-
+                            <p> User restricted access / login required
+                                • Import CI data from CSV file containing the "department" and "owned_by_department" fields 
+                                used to filter on required data. The data model can be seen in the Development & Deployment section above
+                                • View CI records where there is a mismatch between owning department and billing department data 
+                                • View Bar and Pie chart graphed CI data by "User", and by "Department"
+                                • Launch Service Now from the Dashboard to make CMBD updates, gather new CSV reports, etc
+                                • Add new users to tha application via the User Profile page
+                                • NPM scripts available for package management and cleanup
+                                              
                             </p>
                         </div>
                     </div>
@@ -172,36 +172,36 @@
                 <div class="row centered">
                     <h2 class="centered">MEET OUR TEAM</h2>
                     <hr>
-                    <div class="d-flex justify-content-between">
-                        <div class="col-lg-2 teamborder"> <img class="img img-circle"
+                    <div class="d-flex justify-content-between flex-wrap">
+                        <div class="col-sm-2 teamborder"> <img class="img img-circle"
                                 src="./assets/images/about/Michelle.jpg" height="120px" width="120px"
                                 alt="Michelle Photo">
                             <h4>Michelle Brewington</h4><br>
-                            <p>Bio Text Here</p>
+                            <p>DIG TECH-CTS-Operations, Risk Analyst</p>
                             <a href="http://twitter.com"><i class="fab fa-twitter"></i></a>
                             <a href="http://facebook.com"><i class="fab fa-facebook"></i></a>
                             <a href="http://linkedin.com"><i class="fab fa-linkedin"></i></a>
                         </div>
-                        <div class="col-lg-2 teamborder"> <img class="img img-circle"
+                        <div class="col-sm-2 teamborder"> <img class="img img-circle"
                                 src="./assets/images/about/Mirian.jpg" height="120px" width="120px" alt="Mirian Photo">
                             <h4>Mirian Ejerenwa</h4><br>
-                            <p>Bio Text Here</p>
+                            <p>DIG TECH-CTS-Digital Workplace, Sr MyApps Operations Engineer</p>
                             <a href="http://twitter.com"><i class="fab fa-twitter"></i></a>
                             <a href="http://facebook.com"><i class="fab fa-facebook"></i></a>
                             <a href="http://linkedin.com"><i class="fab fa-linkedin"></i></a>
                         </div>
-                        <div class="col-lg-2 teamborder"> <img class="img img-circle"
+                        <div class="col-sm-2 teamborder"> <img class="img img-circle"
                                 src="./assets/images/about/Peter.jpg" height="120px" width="120px" alt="Peter Photo">
                             <h4>Peter Abogi</h4><br>
-                            <p>Bio Text Here</p>
+                            <p>DIG TECH-CTS-Operations, Network Operations Engineer</p>
                             <a href="http://twitter.com"><i class="fab fa-twitter"></i></a>
                             <a href="http://facebook.com"><i class="fab fa-facebook"></i></a>
                             <a href="http://linkedin.com"><i class="fab fa-linkedin"></i></a>
                         </div>
-                        <div class="col-lg-2 teamborder"> <img class="img img-circle"
+                        <div class="col-sm-2 teamborder"> <img class="img img-circle"
                                 src="./assets/images/about/steve.jpg" height="120px" width="120px" alt="Steve Photo">
                             <h4>Steve Miotti</h4><br>
-                            <p>Need 4 lines of text. Need 4 lines of text.Need 4 lines of text</p>
+                            <p>DIG TECH-CTS-Operations, Sr Staff Technical Program Manager</p>
                             <a href="http://twitter.com"><i class="fab fa-twitter"></i></a>
                             <a href="http://facebook.com"><i class="fab fa-facebook"></i></a>
                             <a href="http://linkedin.com"><i class="fab fa-linkedin"></i></a>
