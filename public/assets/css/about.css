@@ -220,6 +220,14 @@
     #imgstyle2{
       height: 45px; 
       width: 45px;
-      }
+    }
+  /* Paragrapgh for Parallax Section */
+  .paral p {
+    font-size: 14px;
+    /* color:rgb(255, 255, 255); */
+    text-align: center;
+    line-height: 15px;
+    /* padding-top: 15px; */
+  }
   }
 
