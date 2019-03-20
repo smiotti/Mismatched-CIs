@@ -223,10 +223,10 @@
     }
   /* Paragrapgh for Parallax Section */
   .paral p {
-    font-size: 18px;
+    font-size: 20px;
     /* color:rgb(255, 255, 255); */
     text-align: center;
-    line-height: 20px;
+    line-height: 24px;
     /* padding-top: 15px; */
   }
   }
